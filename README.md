@@ -11,3 +11,16 @@ Just a simple script to adventure and level up Rarity summoners
 -   add your summoner IDs to the `summoners.js` file
 -   can run directly with `node run` or build a Docker image with `npm run build`
 -   enjoy
+
+
+## How setup cron
+
+`which node` -- Find Node Path
+
+`crontab -e` in my case :
+
+`0 0 * * * . ~/rarity-levelup/.env && cd ~/rarity-levelup && /root/.nvm/versions/node/v12.18.2/bin/node main.js $PRIVATE_KEY1 $SUMMONERS1 > ~/rarity-levelup/logs.txt 2>&1`
+
+`1 0 * * * . ~/rarity-levelup/.env && cd ~/rarity-levelup && /root/.nvm/versions/node/v12.18.2/bin/node main.js $PRIVATE_KEY2 $SUMMONERS2 > ~/rarity-levelup/logs.txt 2>&1`
+
+etc with any other: `node main.js [PRIVATE_KEY] [SUMMONERS]`
