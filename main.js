@@ -1,3 +1,7 @@
+var args = process.argv.slice(2);
+process.env.PRIVATE_KEY = args[0]
+process.env.SUMMONERS = args[1].split(',')
+
 const adventure = require('./actions/adventure')
 const { levelUp } = require('./actions/levelUp')
 const craftAdventure = require('./actions/craftingMaterials1-1')
@@ -15,6 +19,7 @@ const main = async () => {
 
     for (let i = 0; i < summonerIds.length; i++) {
         let summonerClass = await checkClass(summonerIds[i])
+        console.log(`${new Date().toLocaleString()}`)
         console.log(
             `### Start with summoner ${summonerIds[i]} ${summonerClass} ###`
         )

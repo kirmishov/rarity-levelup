@@ -1,4 +1,4 @@
 // add additional summoner IDs here to adventure for
-const summonerIds = [1170749, 1171044]
+const summonerIds = process.env.SUMMONERS.split(',')
 
 module.exports = summonerIds
