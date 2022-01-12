@@ -13,7 +13,7 @@ Just a simple script to adventure and level up Rarity summoners
 -   enjoy
 
 
-## How setup cron
+## How to setup cron
 
 `which node` -- Find Node Path
 
